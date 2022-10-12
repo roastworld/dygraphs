@@ -158,8 +158,6 @@ Dygraph.prototype.__init__ = function (div, file, attrs) {
     this.annotations_ = attrs.annotations;
   }
 
-  console.log("USING CUSTOM DYGRAPH");
-
   // Clear the div. This ensure that, if multiple dygraphs are passed the same
   // div, then only one will be drawn.
   div.innerHTML = "";
@@ -842,7 +840,7 @@ Dygraph.prototype.createInterface_ = function () {
 
   // Create the grapher
   this.layout_ = new DygraphLayout(this);
-  if (this.annotations) {
+  if (this.annotations && this.annotations.length) {
     this.layout_.setAnnotations(this.annotations_);
   }
 
