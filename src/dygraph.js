@@ -840,7 +840,7 @@ Dygraph.prototype.createInterface_ = function () {
 
   // Create the grapher
   this.layout_ = new DygraphLayout(this);
-  if (this.annotations && this.annotations.length) {
+  if (this.annotations_ && this.annotations_.length) {
     this.layout_.setAnnotations(this.annotations_);
   }
 
