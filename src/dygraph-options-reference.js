@@ -18,6 +18,12 @@ if (typeof process !== "undefined") {
     OPTIONS_REFERENCE =
       // <JSON>
       {
+        annotations: {
+          default: "[]",
+          labels: ["Annotations"],
+          type: "array",
+          description: "Annotations to include on the graph",
+        },
         xValueParser: {
           default: "parseFloat() or Date.parse()*",
           labels: ["CSV parsing"],
